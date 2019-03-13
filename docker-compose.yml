@@ -1,0 +1,14 @@
+version: "2"
+
+services:
+  rabbitmq:
+    container_name: cbr-rabbitmq
+    image: rabbitmq:management
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+  mongodb:
+    container_name: cbr-mongodb
+    image: mongo
+    ports:
+      - "27017:27017"

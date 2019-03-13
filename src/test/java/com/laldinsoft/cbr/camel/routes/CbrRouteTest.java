@@ -38,7 +38,7 @@ public class CbrRouteTest extends AbstractIntegrationTest {
                 rabbitAdmin.getQueueProperties("NOTIFICATION.LA0246.UC9999"));
 
         NotificationMsgDTO message = new NotificationMsgDTO("32b568bc-4104-4f85-b675-165c5ed18733",
-                "UC9999", "LA0246", "Lorem ipsum");
+                "LA0246", "UC9999", "Lorem ipsum");
 
         // When
         rabbitTemplate.convertAndSend(EXCHANGE, ROUTING_KEY, message);
